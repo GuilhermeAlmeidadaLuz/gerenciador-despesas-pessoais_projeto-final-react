@@ -1,0 +1,1 @@
+// página para detalhamento individual de transação
