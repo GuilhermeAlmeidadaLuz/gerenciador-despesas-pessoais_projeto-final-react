@@ -29,4 +29,20 @@ Uma aplicação web desenvolvida em **React** para o controle financeiro pessoal
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+   git clone https://github.com/GuilhermeAlmeidadaLuz/gerenciador-despesas-pessoais_projeto-final-react.git
+
+2. **Entre na pasta raiz do projeto:**
+   ```bash
+   cd gerenciador-despesas-pessoais_projeto-final-react
+
+3. **Instale as dependências:**
+   ```bash
+   npm install
+
+4. **Execute o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+
+5. **O Terminal irá mostrar a url e porta (exemplo):**
+   ```bash
+   http://localhost:5173/
