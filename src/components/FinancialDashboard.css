@@ -1,0 +1,13 @@
+/* // Componente Dashboard para mostra entradas, saídas e saldo (balanço financeiro) */
+
+.container-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.linha-dashboard {
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+}
