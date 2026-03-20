@@ -1,0 +1,1 @@
+// Página que vai renderizar o componente Dashboard, Lista de transações finaneiras e outros que forem necessários
