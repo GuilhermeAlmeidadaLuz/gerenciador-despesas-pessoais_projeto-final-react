@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function HomePage() {
     return (
         <main className="home-page">
-            <h1>Bem-Vindo ao seu Gerenciador de Despesas Pessoal</h1>
+            <h1>Bem-Vindo ao seu Gerenciador de Despesas Pessoais</h1>
             <p>Aqui você mantém sua vida financeira organizada</p>
 
             <Link to="/transacoes-financeiras" className='btn-action'>
