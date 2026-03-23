@@ -2,11 +2,11 @@
 
 import './TotalExitsCard.css'   // importa css com o mesmo nome do componente para estilizá-lo
 
-export default function TotalExitsCard() {
+export default function TotalExitsCard( {saidaTotal} ) {
     return (
         <div className="total-exits-card">
             <h1>Saídas</h1>
-            <p>Valor: R$</p>
+            <p>R$ {saidaTotal.toFixed(2).replace('.', ',')}</p>
         </div>
     )
 }

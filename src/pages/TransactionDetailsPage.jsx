@@ -5,7 +5,7 @@ import { useFinancialTransactions } from '../contexts/FinancialTransactionsConte
 
 export default function TransactionDetailsPage() {
     const { id } = useParams()
-    const { transactions, removerTransacao } = useFinancialTransactions()
+    const { transactions, removerTransacao, formattedDate } = useFinancialTransactions()
     const navigate = useNavigate()
 
     const transaction = transactions.find(transaction => transaction.id === Number(id))
@@ -25,18 +25,6 @@ export default function TransactionDetailsPage() {
     const handleRemover = () => {
         removerTransacao(transaction.id)
         navigate('/transacoes-financeiras')
-    }
-
-    const formattedDate = (date) => {
-        const dateObj = new Date(date)
-
-        let day = dateObj.getDate().toString()
-        let month = dateObj.getMonth().toString()
-        let year = dateObj.getFullYear().toString()
-
-        let formattedDay = (day.length == 1) ? ('0'+day) : day
-        let formattedMonth = (month.length == 1) ? ('0'+month) : month
-        return `${formattedDay}/${formattedMonth}/${year}`
     }
 
     return (
@@ -61,11 +49,11 @@ export default function TransactionDetailsPage() {
                     </li>
                     <li>
                         <strong>Valor: </strong>
-                        <span>R$ {transaction.value.toFixed(2)}</span>
+                        <span>R$ {transaction.value.toFixed(2).replace('.', ',')}</span>
                     </li>
                 </ul>
                 <button onClick={handleRemover} className="btn-remover">
-                    Remover Transação
+                    Remover
                 </button>
             </div>
         </main>
