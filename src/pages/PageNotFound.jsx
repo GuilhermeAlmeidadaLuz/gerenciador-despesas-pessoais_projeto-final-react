@@ -1,12 +1,21 @@
 // Página não encontrada
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import './PageNotFound.css'
 
 export default function PageNotFound() {
-    return (
-        <main className="pagina-404">
-            <h1>404</h1>
-            <p>Esta página não existe</p>
-            <Link to="/" className='btn-voltar'>Voltar para início</Link>
-        </main>
-    )
+  return (
+    <main className="not-found-container">
+      <div className="not-found-content">
+        <h1 className="not-found-code">404</h1>
+        <h2 className="not-found-title">Ops! Página não encontrada</h2>
+        <p className="not-found-text">
+          A página que você está procurando não existe ou foi movida. Que tal
+          voltar para o seu gerenciador de despesas?
+        </p>
+        <Link to="/" className="not-found-button">
+          Voltar para o Início
+        </Link>
+      </div>
+    </main>
+  );
 }

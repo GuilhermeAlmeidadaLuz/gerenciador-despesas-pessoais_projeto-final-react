@@ -83,16 +83,6 @@ export default function FormForFinancialTransaction() {
         navigate('/transacoes-financeiras')
     }
 
-    const formattedDate = (date) => {
-        let day = date.getDate().toString()
-        let month = date.getMonth().toString()
-        let year = date.getFullYear().toString()
-
-        let formattedDay = (day.length == 1) ? ('0'+day) : day
-        let formattedMonth = (month.length == 1) ? ('0'+month) : month
-        return `${formattedDay}/${formattedMonth}/${year}`
-    }
-
     const formattedValue = (value) => {
         const commaPosition = value.indexOf(',')
 
