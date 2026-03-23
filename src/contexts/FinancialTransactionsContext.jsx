@@ -39,8 +39,22 @@ export function FinancialTransactionsProvider( { children } ) {
     }
     // alterar tipo de transação financeira (entrada ou saída):
 
+    // formatar data
+    const formattedDate = (date) => {
+        const dateObj = new Date(date)
+
+        let day = dateObj.getDate().toString()
+        let month = dateObj.getMonth().toString()
+        let year = dateObj.getFullYear().toString()
+
+        let formattedDay = (day.length == 1) ? ('0'+day) : day
+        let formattedMonth = (month.length == 1) ? ('0'+month) : month
+        return `${formattedDay}/${formattedMonth}/${year}`
+    }
+
+
     return (
-        <FinancialTransactionsContext.Provider value={ { transactions, adicionarTransacao, removerTransacao } }>
+        <FinancialTransactionsContext.Provider value={ { transactions, adicionarTransacao, removerTransacao, formattedDate } }>
             {children}
         </FinancialTransactionsContext.Provider>
     )

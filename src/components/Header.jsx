@@ -16,6 +16,7 @@ export default function Header() {
                 >
                     Início
                 </NavLink>
+                <span style={{margin:'5px'}}> </span>
                 <NavLink
                  to="/transacoes-financeiras"
                 >
