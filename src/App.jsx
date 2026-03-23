@@ -1,4 +1,6 @@
 import './App.css'
+import NotFound from './layouts/NotFound';
+
 
 // importar roteamento
 import { Routes, Route } from 'react-router-dom'
@@ -28,5 +30,13 @@ function App() {
     </div>
   )
 }
+
+
+<Routes>
+  <Route path="/" element={<HomePage />} />
+  <Route path="/dashboard" element={<DashboardPage />} />
+  {/* Captura qualquer rota que não exista */}
+  <Route path="*" element={<PageNotFound />} />
+</Routes>
 
 export default App
